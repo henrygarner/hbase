@@ -18,3 +18,9 @@ template "/etc/apt/sources.list.d/cloudera.list" do
 end
 
 package 'hadoop-hbase'
+
+template "/usr/lib/hbase/conf/hbase-site.xml" do
+  owner "root"
+  mode "0644"
+  source "hbase-site.xml.erb"
+end
