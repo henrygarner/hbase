@@ -23,4 +23,5 @@ template "/usr/lib/hbase/conf/hbase-site.xml" do
   owner "root"
   mode "0644"
   source "hbase-site.xml.erb"
+  notifies :restart, "service[hadoop-hbase-master]"
 end
